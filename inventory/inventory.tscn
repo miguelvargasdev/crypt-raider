@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://6lecfyfhb2uw"]
+
+[ext_resource type="Script" path="res://inventory/inventory.gd" id="1_8eeb0"]
+[ext_resource type="Resource" uid="uid://b5qttdga5441c" path="res://inventory/bag/resources/4x4_bag.tres" id="2_56cmn"]
+[ext_resource type="Resource" uid="uid://bj8ijtnl1il6j" path="res://inventory/bag/resources/2x2_bag.tres" id="3_63yko"]
+
+[node name="InventoryPanel" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8eeb0")
+inventory = Array[Resource("res://inventory/bag/resources/bag.gd")]([ExtResource("3_63yko"), ExtResource("2_56cmn"), ExtResource("2_56cmn")])
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2

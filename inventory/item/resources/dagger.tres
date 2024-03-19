@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bhcixq7upi7wk"]
+
+[ext_resource type="Texture2D" uid="uid://biw5fuiqoc84t" path="res://inventory/item/icons/dagger_icon.tres" id="1_c76kr"]
+[ext_resource type="Script" path="res://inventory/item/resources/item.gd" id="1_xl2fi"]
+
+[resource]
+script = ExtResource("1_xl2fi")
+name = "Dagger"
+description = "A sharp but short dagger."
+size = Vector2(1, 1)
+icon = ExtResource("1_c76kr")

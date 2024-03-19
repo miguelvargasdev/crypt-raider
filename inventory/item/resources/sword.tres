@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dsdh8mmouwy0s"]
+
+[ext_resource type="Script" path="res://inventory/item/resources/item.gd" id="1_n5o5t"]
+[ext_resource type="Texture2D" uid="uid://biw5fuiqoc84t" path="res://inventory/item/icons/dagger_icon.tres" id="1_svnly"]
+
+[resource]
+script = ExtResource("1_n5o5t")
+name = "Sword"
+description = "A long, point stick."
+size = Vector2(2, 3)
+icon = ExtResource("1_svnly")

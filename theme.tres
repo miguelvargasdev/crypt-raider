@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://di21nirpiqqr1"]
+
+[ext_resource type="FontFile" uid="uid://cg0b74eajqrei" path="res://ChronoType.ttf" id="1_cfuhh"]
+
+[resource]
+default_font = ExtResource("1_cfuhh")
+default_font_size = 12
+Label/fonts/font = ExtResource("1_cfuhh")

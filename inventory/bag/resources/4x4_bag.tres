@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Bag" load_steps=2 format=3 uid="uid://b5qttdga5441c"]
+
+[ext_resource type="Script" path="res://inventory/bag/resources/bag.gd" id="1_qweoo"]
+
+[resource]
+script = ExtResource("1_qweoo")
+bag_name = "Rucksack"
+size = Vector2i(4, 4)
