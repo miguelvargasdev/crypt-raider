@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://inventory/bag/bag_container.gd" id="1_l7h5h"]
 [ext_resource type="PackedScene" uid="uid://bnxbq0ba77wql" path="res://inventory/slot/slot.tscn" id="2_lb4o6"]
-[ext_resource type="Resource" uid="uid://bhcixq7upi7wk" path="res://inventory/item/resources/dagger.tres" id="3_mawth"]
+[ext_resource type="Resource" uid="uid://dsdh8mmouwy0s" path="res://inventory/item/resources/sword.tres" id="3_cudq7"]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 15
@@ -11,8 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l7h5h")
-slot = ExtResource("2_lb4o6")
-_bag_inventory = Array[Resource("res://inventory/item/resources/item.gd")]([ExtResource("3_mawth")])
+_slot = ExtResource("2_lb4o6")
+_bag_inventory = Array[Resource("res://inventory/item/resources/item.gd")]([ExtResource("3_cudq7")])
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 2

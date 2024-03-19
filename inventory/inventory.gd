@@ -9,6 +9,7 @@ func toggle_inventory():
 	pass
 
 func initialize():
+	#print
 	for bag in inventory:
 		print("Creating new bag...")
 		var new_bag_container = bag_container.instantiate()

@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_vp1i8")
-bag_name = "Fanny Pack"
-size = Vector2i(2, 2)
+bag_name = "Pocket"
+size = Vector2i(1, 2)
