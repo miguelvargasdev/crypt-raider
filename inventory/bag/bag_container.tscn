@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bnxbq0ba77wql" path="res://inventory/slot/slot.tscn" id="2_lb4o6"]
 [ext_resource type="Resource" uid="uid://dsdh8mmouwy0s" path="res://inventory/item/resources/sword.tres" id="3_cudq7"]
 
-[node name="MarginContainer" type="MarginContainer"]
+[node name="BagContainer" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

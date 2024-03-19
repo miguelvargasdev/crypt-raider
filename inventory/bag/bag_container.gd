@@ -7,7 +7,6 @@ var slots: Array
 @export var _slot: PackedScene
 @export var _bag_inventory: Array[Item]
 
-@onready var _item_container
 @onready var grid_container: GridContainer = $GridContainer
 
 func set_bag(bag: Bag):
@@ -73,10 +72,9 @@ func _place_item(item: Item, start_x: int, start_y: int, end_x: int, end_y: int)
 	for i in range(start_y, end_y):
 		for j in range(start_x, end_x):
 			slots[i][j].set_item(item)
-
-	slots[start_y][start_x].set_item_container(item)
+	slots[start_y][start_x].resize_item_container(item)
+	slots[start_y][start_x].visible_item_container(true)
 	
 
 func _ready():
-	_item_container = preload("res://inventory/item/item_container.tscn")
 	pass

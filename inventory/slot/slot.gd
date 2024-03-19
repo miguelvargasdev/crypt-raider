@@ -7,7 +7,7 @@ var _item: Item
 @onready var xy_label: Label
 @onready var item_label: Label
 @onready var item_texture: TextureRect
-@onready var item_container: PanelContainer
+@onready var item_container: MarginContainer
 
 signal slot_clicked(slot: Slot)
 
@@ -32,6 +32,9 @@ func set_item(item: Item):
 	item_texture.texture = item.icon as Texture2D
 	_occupied = true
 
-func set_item_container(item: Item):
-	item_container.set_size(item.size * 32)
-	item_container.show()
+func resize_item_container(item: Item):
+	item_container.set_size(item.size * 31)
+
+func visible_item_container(is_visible: bool):
+	item_container.visible = is_visible
+	
