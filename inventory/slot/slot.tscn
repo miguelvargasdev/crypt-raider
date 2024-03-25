@@ -20,6 +20,7 @@ offset_bottom = 32.0
 texture = ExtResource("3_wf26c")
 
 [node name="ItemTexure" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 32.0
 offset_bottom = 32.0

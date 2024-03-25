@@ -1,7 +1,7 @@
 extends PanelContainer
 
 @onready var bag_container: PackedScene
-@export var inventory: Array[Bag]
+@export var inventory: Array[Bag] = []
 
 
 # Makes the inventory panel appear/disappear
@@ -20,3 +20,4 @@ func initialize():
 func _ready():
 	bag_container = preload("res://inventory/bag/bag_container.tscn")
 	initialize()
+	toggle_inventory()

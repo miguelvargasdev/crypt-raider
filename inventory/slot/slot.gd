@@ -32,6 +32,12 @@ func set_item(item: Item):
 	item_texture.texture = item.icon as Texture2D
 	_occupied = true
 
+func remove_item():
+	_item = null
+	item_label.text = ""
+	item_texture.texture = null
+	_occupied = false
+
 func resize_item_container(item: Item):
 	item_container.set_size(item.size * 31)
 
