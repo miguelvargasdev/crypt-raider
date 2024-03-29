@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="BagData" load_steps=2 format=3 uid="uid://bogl84iyq5fld"]
+
+[ext_resource type="Script" path="res://inventory/bag/resources/BagData.cs" id="1_y1on8"]
+
+[resource]
+script = ExtResource("1_y1on8")
+name = "Fanny Pack"
+size = Vector2i(3, 2)

@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp0hl2ugwv05o"]
+
+[ext_resource type="Theme" uid="uid://di21nirpiqqr1" path="res://theme.tres" id="1_wc8sy"]
+[ext_resource type="Script" path="res://inventory/bag/ui/BagUI.cs" id="2_yvsov"]
+[ext_resource type="PackedScene" uid="uid://bnxbq0ba77wql" path="res://inventory/slot/slot.tscn" id="3_qmf8b"]
+[ext_resource type="PackedScene" uid="uid://c4aprjmys3fc4" path="res://inventory/bag/Bag.tscn" id="4_t27ym"]
+
+[node name="BagContainer" type="MarginContainer" node_paths=PackedStringArray("Bag", "Grid", "Grid2", "BagName")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_wc8sy")
+script = ExtResource("2_yvsov")
+Bag = NodePath("Bag")
+SlotScene = ExtResource("3_qmf8b")
+Grid = NodePath("VBoxContainer/PanelContainer/SlotContainer")
+Grid2 = NodePath("VBoxContainer/PanelContainer/ItemContainer")
+BagName = NodePath("VBoxContainer/BagName")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = -1
+
+[node name="BagName" type="TabBar" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+scrolling_enabled = false
+scroll_to_selected = false
+tab_count = 1
+tab_0/title = "(bag name)"
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SlotContainer" type="GridContainer" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = -1
+theme_override_constants/v_separation = -1
+
+[node name="ItemContainer" type="GridContainer" parent="VBoxContainer/PanelContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+theme_override_constants/h_separation = -1
+theme_override_constants/v_separation = -1
+
+[node name="Bag" parent="." instance=ExtResource("4_t27ym")]

@@ -1,15 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://6lecfyfhb2uw"]
+[gd_scene load_steps=6 format=3 uid="uid://6lecfyfhb2uw"]
 
-[ext_resource type="Script" path="res://inventory/inventory.gd" id="1_8eeb0"]
-[ext_resource type="Resource" uid="uid://b5qttdga5441c" path="res://inventory/bag/resources/4x4_bag.tres" id="2_56cmn"]
-[ext_resource type="Resource" uid="uid://bj8ijtnl1il6j" path="res://inventory/bag/resources/2x2_bag.tres" id="3_63yko"]
-[ext_resource type="Resource" uid="uid://qhipbax6btst" path="res://inventory/bag/resources/3x2_bag.tres" id="3_hwj2t"]
+[ext_resource type="Theme" uid="uid://di21nirpiqqr1" path="res://theme.tres" id="1_3pam4"]
+[ext_resource type="Script" path="res://inventory/Inventory.cs" id="1_12ouf"]
+[ext_resource type="PackedScene" uid="uid://bp0hl2ugwv05o" path="res://inventory/bag/ui/bag_container.tscn" id="2_wiwcb"]
+[ext_resource type="PackedScene" uid="uid://c4aprjmys3fc4" path="res://inventory/bag/Bag.tscn" id="3_xr576"]
+[ext_resource type="Resource" uid="uid://cnb3rbm3mkrw7" path="res://inventory/bag/resources/4x4Bag.tres" id="4_iffew"]
 
-[node name="InventoryPanel" type="PanelContainer"]
+[node name="InventoryPanel" type="PanelContainer" node_paths=PackedStringArray("Bags", "BagContainer")]
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_8eeb0")
-inventory = Array[Resource("res://inventory/bag/resources/bag.gd")]([ExtResource("3_63yko"), ExtResource("3_hwj2t"), ExtResource("2_56cmn")])
+theme = ExtResource("1_3pam4")
+script = ExtResource("1_12ouf")
+BagUI = ExtResource("2_wiwcb")
+Bags = [NodePath("Bags/Bag"), NodePath("Bags/Bag2")]
+BagContainer = NodePath("VBoxContainer")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
+
+[node name="Bags" type="Node" parent="."]
+
+[node name="Bag" parent="Bags" instance=ExtResource("3_xr576")]
+Data = ExtResource("4_iffew")
+
+[node name="Bag2" parent="Bags" instance=ExtResource("3_xr576")]

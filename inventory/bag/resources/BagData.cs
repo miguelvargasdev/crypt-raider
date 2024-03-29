@@ -1,7 +1,9 @@
 using Godot;
 using System;
 
-public partial class Bag : Resource
+
+[GlobalClass]
+public partial class BagData : Resource
 {
     [Export] public string name;
     [Export] public Vector2I size;

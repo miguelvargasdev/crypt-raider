@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="BagData" load_steps=2 format=3 uid="uid://bq5ht4dppd356"]
+
+[ext_resource type="Script" path="res://inventory/bag/resources/BagData.cs" id="1_3dv21"]
+
+[resource]
+script = ExtResource("1_3dv21")
+name = "Big Pocket"
+size = Vector2i(2, 2)
